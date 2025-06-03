@@ -34,14 +34,13 @@
             background-image: url('https://i.postimg.cc/DZxxMkjG/wmremove-transformed.jpg&auto=format&fit=crop&w=1770&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             position: relative;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 2rem;
+            padding: 1rem;
         }
         
         .hero-bg::before {
@@ -62,7 +61,7 @@
         }
         
         .section-padding {
-            padding: 5rem 1rem;
+            padding: 3rem 1rem;
         }
         
         .card {
@@ -74,8 +73,8 @@
         }
         
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(194, 24, 91, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(194, 24, 91, 0.15);
         }
         
         .card-content {
@@ -84,13 +83,8 @@
         
         .service-img {
             width: 100%;
-            height: 240px;
+            height: 200px;
             object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .card:hover .service-img {
-            transform: scale(1.05);
         }
         
         .course-img {
@@ -101,14 +95,9 @@
         
         .gallery-img {
             width: 100%;
-            height: 250px;
+            height: 200px;
             object-fit: cover;
             border-radius: 8px;
-            transition: all 0.4s ease;
-        }
-        
-        .gallery-img:hover {
-            transform: scale(1.05);
         }
         
         .mobile-menu {
@@ -123,31 +112,16 @@
             padding: 0.5rem 0;
         }
         
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-        
         .cta-button {
             background: linear-gradient(135deg, var(--primary), #ad1457);
             color: white;
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 1.8rem;
             border-radius: 30px;
             font-weight: 500;
             transition: all 0.3s ease;
             display: inline-block;
             border: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3);
         }
         
@@ -162,30 +136,9 @@
             transition: all 0.3s ease;
         }
         
-        .social-link:hover {
-            color: var(--accent);
-        }
-        
-        .testimonial-card {
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            font-size: 6rem;
-            font-family: 'Playfair Display', serif;
-            color: rgba(194, 24, 91, 0.1);
-            line-height: 1;
-        }
-        
         .rating {
             color: var(--accent);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 1rem;
         }
         
@@ -196,49 +149,28 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
         
-        .course-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(194, 24, 91, 0.85);
-            color: white;
-            padding: 1.5rem;
-            transform: translateY(100%);
-            transition: transform 0.4s ease;
-        }
-        
-        .course-card:hover .course-overlay {
-            transform: translateY(0);
-        }
-        
         .floating-btn {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
             background: #25D366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             z-index: 100;
             transition: all 0.3s ease;
             animation: pulse 2s infinite;
         }
         
-        .floating-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-        
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
         
@@ -248,14 +180,14 @@
         
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-20px);}
-            60% {transform: translateY(-10px);}
+            40% {transform: translateY(-15px);}
+            60% {transform: translateY(-8px);}
         }
         
         .founder-img {
             border-radius: 50%;
-            width: 280px;
-            height: 280px;
+            width: 220px;
+            height: 220px;
             object-fit: cover;
             border: 5px solid white;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -265,41 +197,27 @@
             background: rgba(255, 255, 255, 0.9);
             border: 1px solid #eee;
             border-radius: 8px;
-            padding: 1rem;
+            padding: 0.9rem;
             transition: all 0.3s ease;
-        }
-        
-        .input-field:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(194, 24, 91, 0.1);
         }
         
         .price-tag {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 12px;
+            right: 12px;
             background: var(--accent);
             color: white;
-            padding: 0.3rem 1rem;
+            padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         
+        /* Mobile Styles */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-            
-            .mobile-menu.active + .nav-links {
-                display: flex;
-                flex-direction: column;
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -309,6 +227,15 @@
                 z-index: 10;
                 text-align: center;
                 box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .mobile-menu.active + .nav-links {
+                display: flex;
+                flex-direction: column;
             }
             
             .mobile-menu.active + .nav-links li {
@@ -322,30 +249,69 @@
             }
             
             .hero-bg {
-                min-height: 90vh;
+                min-height: 85vh;
                 background-attachment: scroll;
                 background-position: 65% center;
             }
             
+            .hero-content h2 {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+            }
+            
             .section-padding {
-                padding: 3rem 1rem;
+                padding: 2rem 1rem;
             }
             
-            .service-img {
-                height: 200px;
-            }
-            
-            .course-img {
+            .service-img, .course-img, .gallery-img {
                 height: 180px;
             }
             
-            .gallery-img {
-                height: 200px;
+            .founder-img {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 1.5rem;
             }
             
-            .founder-img {
-                width: 220px;
-                height: 220px;
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .testimonial-card {
+                margin-bottom: 1.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .map-container {
+                height: 250px;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .logo-img {
+                height: 40px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -357,24 +323,26 @@
     </a>
 
     <!-- Navbar -->
-    <nav class="bg-white py-4 sticky top-0 z-50 shadow-sm">
+    <nav class="bg-white py-3 sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="https://i.postimg.cc/13PLNXcK/Chat-GPT-Image-Jun-2-2025-07-51-24-PM-2-2-removebg-preview-1.png"  class="w-
+                <img src="https://i.postimg.cc/13PLNXcK/Chat-GPT-Image-Jun-2-2025-07-51-24-PM-2-2-removebg-preview-1.png" 
 
-auto h-auto">
-                <h1 class="text-2xl font-bold text-gray-800">   Anshika <span class="text-[#c2185b]">Makeup Studio</span></h1>
+class="logo-img w-auto h-12">
+                <h1 class="logo-text text-xl font-bold text-gray-800 ml-2">Anshika <span class="text-[#c2185b]">Makeup<br> 
+
+Studio  & Academy</span></h1>
             </div>
             
             <button class="mobile-menu md:hidden focus:outline-none" aria-label="Toggle menu">
-                <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                <svg class="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
 
 xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
             
-            <ul class="nav-links hidden md:flex space-x-8">
+            <ul class="nav-links hidden md:flex space-x-6">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -386,17 +354,18 @@ xmlns="http://www.w3.org/2000/svg">
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg text-white ">
-        <div class="hero-content px-4 ">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6  leading-tight text-white">Be Beautiful.<br> Be Trained.<br> Be You.<br><h3></h3>
-</h2>
+    <section id="home" class="hero-bg text-white">
+        <div class="hero-content px-4">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white">Be Beautiful.<br> Be Trained.<br> Be 
+
+You.</h2>
             
-            <div class="flex flex-wrap justify-centre gap-4">
+            <div class="hero-buttons flex flex-wrap justify-center gap-3 mt-4">
                 <a href="#contact" class="cta-button">Book Appointment</a>
-                <a href="#courses" class="cta-button bg-white text-[#c2185b] hover:bg-gray-100">Join Our Academy</a>
+                <a href="#courses" class="cta-button bg-white text-[#c2185b] hover:bg-gray-100">Join Academy</a>
             </div>
         </div>
-        <a href="#about" class="absolute bottom-8 text-white text-4xl bounce">
+        <a href="#about" class="absolute bottom-6 text-white text-3xl bounce">
             <i class="fas fa-chevron-down"></i>
         </a>
     </section>
@@ -404,33 +373,32 @@ xmlns="http://www.w3.org/2000/svg">
     <!-- Detailed Services Section -->
     <section id="services" class="section-padding">
         <div class="container mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-8">
                 <span class="text-[#c2185b] font-semibold">OUR SERVICES</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2">Premium Beauty Solutions</h2>
-                
+                <h2 class="section-title text-2xl md:text-3xl font-bold mt-2">Premium Beauty Solutions</h2>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div class="card bg-white">
                     <img src="https://i.postimg.cc/Vvktysh8/Indian-Bridal-Makeup-and-Skincare-
 
 93c177bb87.webp&auto=format&fit=crop&w=880&q=80" alt="Makeup Services" class="service-img">
                     <div class="price-tag">₹499+</div>
                     <div class="card-content">
-                        <h3 class="text-xl font-bold mb-3">Makeup Services</h3>
-                        <p class="mb-4">From bridal to party makeup, we offer personalized solutions for all occasions, tailored for 
-
-Indian women.</p>
-                        <ul class="mb-4 text-sm">
-                            <li class="flex items-center mb-2"><i class="fas fa-check text-[#c2185b] mr-2"></i> Bridal Makeup</li>
-                            <li class="flex items-center mb-2"><i class="fas fa-check text-[#c2185b] mr-2"></i> Party & Evening 
+                        <h3 class="text-lg font-bold mb-2">Makeup Services</h3>
+                        <p class="mb-3 text-sm">Personalized makeup for all occasions and events.</p>
+                        <ul class="mb-3 text-xs">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Bridal 
 
 Makeup</li>
-                            <li class="flex items-center mb-2"><i class="fas fa-check text-[#c2185b] mr-2"></i> Engagement & Pre-
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Party & 
 
-Wedding</li>
+Evening Makeup</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Engagement & 
+
+Pre-Wedding</li>
                         </ul>
-                        <a href="#contact" class="text-[#c2185b] font-semibold hover:text-[#ad1457]">Book Now →</a>
+                        <a href="#contact" class="text-[#c2185b] font-semibold text-sm">Book Now →</a>
                     </div>
                 </div>
                 
@@ -438,18 +406,20 @@ Wedding</li>
                     <img src="https://i.postimg.cc/ryb8Cwk8/nail.png&q=100" alt="Nail Art" class="service-img">
                     <div class="price-tag">₹299+</div>
                     <div class="card-content">
-                        <h3 class="text-xl font-bold mb-3">Nail Art</h3>
-                        <p class="mb-4">Creative and trendy nail art designs to complement your style and occasion.</p>
-                        <ul class="mb-4 text-sm">
-                            <li class="flex items-center mb-2"><i class="fas fa-check text-[#c2185b] mr-2"></i> Gel & Acrylic 
+                        <h3 class="text-lg font-bold mb-2">Nail Art</h3>
+                        <p class="mb-3 text-sm">Creative and trendy designs to complement your style.</p>
+                        <ul class="mb-3 text-xs">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Gel & Acrylic 
 
 Nails</li>
-                            <li class="flex items-center mb-2"><i class="fas fa-check text-[#c2185b] mr-2"></i> Bridal Nail Art</li>
-                            <li class="flex items-center mb-2"><i class="fas fa-check text-[#c2185b] mr-2"></i> Custom Design Nail 
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Bridal Nail 
 
 Art</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Custom 
+
+Designs</li>
                         </ul>
-                        <a href="#contact" class="text-[#c2185b] font-semibold hover:text-[#ad1457]">Book Now →</a>
+                        <a href="#contact" class="text-[#c2185b] font-semibold text-sm">Book Now →</a>
                     </div>
                 </div>
                 
@@ -459,18 +429,21 @@ Art</li>
 class="service-img">
                     <div class="price-tag">₹50+</div>
                     <div class="card-content">
-                        <h3 class="text-xl font-bold mb-3">Salon Services</h3>
-                        <p class="mb-4">Facials, clean-ups, waxing, threading, and more to enhance your natural beauty.</p>
-                        <ul class="mb-4 text-sm">
-                            <li class="flex items-center mb-2"><i class="fas fa-check text-[#c2185b] mr-2"></i> Premium Facials</li>
-                            <li class="flex items-center mb-2"><i class="fas fa-check text-[#c2185b] mr-2"></i> Hair Styling & 
+                        <h3 class="text-lg font-bold mb-2">Salon Services</h3>
+                        <p class="mb-3 text-sm">Enhance your natural beauty with our treatments.</p>
+                        <ul class="mb-3 text-xs">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Premium 
 
-Treatments</li>
-                            <li class="flex items-center mb-2"><i class="fas fa-check text-[#c2185b] mr-2"></i> Skincare 
+Facials</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Hair Spa & 
+
+Styling</li>
+<li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Waxing</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-[#c2185b] mr-2"></i> Skincare 
 
 Treatments</li>
                         </ul>
-                        <a href="#contact" class="text-[#c2185b] font-semibold hover:text-[#ad1457]">Book Now →</a>
+                        <a href="#contact" class="text-[#c2185b] font-semibold text-sm">Book Now →</a>
                     </div>
                 </div>
             </div>
@@ -480,42 +453,45 @@ Treatments</li>
     <!-- Courses Section -->
     <section id="courses" class="bg-[#fff9fb] section-padding">
         <div class="container mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-8">
                 <span class="text-[#c2185b] font-semibold">ACADEMY</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2">Professional Beauty Courses</h2>
-                <div class="w-24 h-1 bg-[#d4af37] mx-auto mt-4"></div>
+                <h2 class="section-title text-2xl md:text-3xl font-bold mt-2">Professional Beauty Courses</h2>
+                <div class="w-20 h-1 bg-[#d4af37] mx-auto mt-3"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="course-card bg-white">
-                    <img src="https://i.postimg.cc/66fgRRz1/IMG-8557.jpg" alt="Professional Makeup Course" class="w-auto h-auto">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Professional Makeup Course</h3>
-                        <p class="mb-4">Learn industry-ready makeup techniques from expert faculty to kickstart your career.</p>
+            <div class="max-w-md mx-auto">
+                <div class="course-card bg-white mb-6">
+                    <img src="https://i.postimg.cc/66fgRRz1/IMG-8557.jpg" alt="Professional Makeup Course" class="w-full h-
+
+auto object-cover">
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2">Professional Makeup Course</h3>
+                        <p class="mb-3 text-sm">Industry-ready makeup techniques to kickstart your career.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-lg text-[#c2185b]">₹12,999</span>
-                            <span class="text-sm">8 Weeks Program</span>
+                            <span class="font-bold text-[#c2185b]">₹12,999</span>
+                            <span class="text-xs">8 Weeks Program</span>
                         </div>
                     </div>
-                    <div class="course-overlay">
-                        <h3 class="text-xl font-bold mb-3">Course Details</h3>
-                        <ul class="mb-4 text-white">
-                            <li class="mb-2"><i class="fas fa-check-circle mr-2"></i> Bridal & Party Makeup</li>
-                            <li class="mb-2"><i class="fas fa-check-circle mr-2"></i> High Fashion & Editorial</li>
-                            <li class="mb-2"><i class="fas fa-check-circle mr-2"></i> Special Effects & Prosthetics</li>
-                            <li class="mb-2"><i class="fas fa-check-circle mr-2"></i> Business & Marketing Skills</li>
+                    <div class="bg-[#c2185b] text-black p-5">
+                        <h3 class="text-lg font-bold mb-2">Course Details</h3>
+                        <ul class="mb-3 text-sm">
+                            <li class="mb-1"><i class="fas fa-check-circle mr-2"></i> Tools & Products Knowledge</li>
+                            <li class="mb-1"><i class="fas fa-check-circle mr-2"></i> Skin Prep & Foundation Application</li>
+                            <li class="mb-1"><i class="fas fa-check-circle mr-2"></i> Colour & Brush Theory</li>
+<li class="mb-1"><i class="fas fa-check-circle mr-2"></i> Facial Anatomy</li>
+<li class="mb-1"><i class="fas fa-check-circle mr-2"></i> Different Makeup Looks</li>
+<li class="mb-1"><i class="fas fa-check-circle mr-2"></i> HairStyling</li>
+<li class="mb-1"><i class="fas fa-check-circle mr-2"></i> Different Type of Saree Draping</li>
                         </ul>
-                        <a href="#contact" class="cta-button inline-block bg-white text-[#c2185b] hover:bg-gray-100">Enroll Now</a>
+                        <a href="#contact" class="cta-button inline-block bg-white text-[#c2185b] text-sm">Enroll Now</a>
                     </div>
                 </div>
-                
-                
             </div>
             
-            <div class="mt-4 bg-gradient-to-r from-[#c2185b] to-[#ad1457] rounded-2xl p-8 text-white text-center max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold mb-4">Limited Time Offer!</h3>
-                <p class="text-xl mb-6 text-pink-700">Enroll in any course this month and get 50% off!</p>
-                <a href="#contact" class="cta-button bg-white text-[#c2185b] hover:bg-gray-100">Claim Offer</a>
+            <div class="bg-gradient-to-r from-[#c2185b] to-[#ad1457] rounded-xl p-5 text-black text-center max-w-md mx-auto">
+                <h3 class="text-xl font-bold mb-3">Limited Time Offer!</h3>
+                <p class="mb-4">Enroll now and get 50% off!</p>
+                <a href="#contact" class="cta-button bg-white text-[#c2185b] text-sm">Claim Offer</a>
             </div>
         </div>
     </section>
@@ -523,41 +499,35 @@ Treatments</li>
     <!-- About Section -->
     <section id="about" class="section-padding">
         <div class="container mx-auto">
-            <div class="text-center mb-8">
+            <div class="text-center mb-6">
                 <span class="text-[#c2185b] font-semibold">ABOUT US</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Beauty Journey</h2>
-                <div class="w-24 h-1 bg-[#d4af37] mx-auto mt-4"></div>
+                <h2 class="section-title text-2xl md:text-3xl font-bold mt-2">Our Beauty Journey</h2>
+                <div class="w-20 h-1 bg-[#d4af37] mx-auto mt-3"></div>
             </div>
             
-            <div class="max-w-4xl mx-auto text-center">
-                <p class="text-lg mb-6">Anshika Makeup Studio and Academy is your one-stop destination for all things beauty! We 
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="mb-4 text-sm md:text-base">Anshika Makeup Studio and Academy is your one-stop destination for all 
 
-specialize in professional makeup courses, beautician training, and a wide range of salon services including facials, clean-ups, 
+things beauty! We specialize in professional makeup courses, beautician training, and a wide range of salon services.</p>
+                <p class="text-sm md:text-base">Led by expert makeup faculty Anshika Sah, our academy empowers aspiring 
 
-waxing, threading, and more. Led by expert makeup faculty Anshika Sah, our academy empowers aspiring artists with industry-ready 
-
-skills while our studio pampers clients with personalized beauty solutions.</p>
-                <p class="text-lg mb-2">Whether you’re here to learn, transform, or simply treat yourself, we’re dedicated to making 
-
-you feel confident and beautiful—inside and out. Book your appointment or join our courses today!</p>
+artists while our studio pampers clients with personalized beauty solutions.</p>
             </div>
         </div>
     </section>
 
     <!-- Founder Section -->
-    <section class="bg-[#fff9fb] py-16">
+    <section class="bg-[#fff9fb] py-10">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                <div class="md:w-2/5 flex justify-center">
-                    <img src="https://i.postimg.cc/yxTz0sXH/109261481-1229578494051469-2002363323273813411-
+            <div class="flex flex-col items-center">
+                <img src="https://i.postimg.cc/yxTz0sXH/109261481-1229578494051469-2002363323273813411-
 
 n.jpg&auto=format&fit=crop&w=688&q=80" alt="Anshika Sah" class="founder-img">
-                </div>
                 
-                <div class="md:w-3/5 text-center md:text-left">
-                    <h2 class="text-3xl font-bold mb-4">Meet Anshika Sah</h2>
-                    <p class="text-lg mb-4">Founder & Lead Makeup Artist</p>
-                    <div class="mb-6">
+                <div class="text-center mt-4">
+                    <h2 class="text-2xl font-bold mb-2">Meet Anshika Sah</h2>
+                    <p class="mb-3">Founder & Lead Makeup Artist</p>
+                    <div class="mb-4">
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -566,15 +536,10 @@ n.jpg&auto=format&fit=crop&w=688&q=80" alt="Anshika Sah" class="founder-img">
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="mb-6">With over 8 years of experience in the beauty industry, Anshika has transformed thousands of 
+                    <p class="mb-3 text-sm">With over 8 years of experience, Anshika has transformed thousands of clients and 
 
-clients and trained hundreds of aspiring makeup artists. Her work has been featured in Bridal Asia Magazine, and she's known for her 
-
-signature "natural glam" style that enhances your unique features.</p>
-                    <p class="mb-2 font-semibold">Certifications: CIDESCO | VLCC | Makeup Forever Academy</p>
-                    <div class="flex justify-center md:justify-start gap-2">
-                        
-                    </div>
+trained hundreds of aspiring makeup artists.</p>
+                    <p class="font-semibold text-sm">Certifications: CIDESCO | VLCC | Makeup Forever Academy</p>
                 </div>
             </div>
         </div>
@@ -583,81 +548,63 @@ signature "natural glam" style that enhances your unique features.</p>
     <!-- Testimonial Section -->
     <section id="testimonials" class="bg-white section-padding">
         <div class="container mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-8">
                 <span class="text-[#c2185b] font-semibold">TESTIMONIALS</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2">What Our Clients Say</h2>
-                <div class="w-24 h-1 bg-[#d4af37] mx-auto mt-4"></div>
+                <h2 class="section-title text-2xl md:text-3xl font-bold mt-2">What Our Clients Say</h2>
+                <div class="w-20 h-1 bg-[#d4af37] mx-auto mt-3"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="testimonial-card bg-[#fff9fb] p-8">
-                    <div class="rating mb-4">
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-[#fff9fb] p-6 rounded-xl mb-5">
+                    <div class="rating mb-3">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="italic mb-6">"She is the best makeup trainer I have ever met. The aura she has is indefinable...and 
+                    <p class="italic mb-4 text-sm">"She is the best makeup trainer I have ever met. The aura she has is 
 
-unbelievable. Her way of teaching is marvelous. She'll let u know everything like she'll teach you from basic like step to step. She 
+indefinable...and unbelievable. Her way of teaching is marvelous. She'll let u know everything like she'll teach you from 
 
-is very polite like she will let u know every single time u ask for, she doesn't only trained students for there own purpose but also 
+basic like step to step. She is very polite like she will let u know every single time u ask for, she doesn't only trained 
 
-concern about students. You guys do visit her studio and learn from her. You will never regret in ur life I assure you about 
+students for there own purpose but also concern about students. You guys do visit her studio and learn from her. You will 
 
-that."</p>
+never regret in ur life I assure you about that."</p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Puja Kumari">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 mr-3 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Puja Kumari" class="w-full h-full 
+
+object-cover">
                         </div>
                         <div>
-                            <p class="font-semibold">Puja Kumari</p>
-                            <p class="text-sm text-gray-600">Student</p>
+                            <p class="font-semibold text-sm">Puja Kumari</p>
+                            <p class="text-xs text-gray-600">Student</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-card bg-[#fff9fb] p-8">
-                    <div class="rating mb-4">
+                <div class="bg-[#fff9fb] p-6 rounded-xl mb-5">
+                    <div class="rating mb-3">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="italic mb-6">"If you want your makeup to feel like yourself but better, do not hesitate at all to 
+                    <p class="italic mb-4 text-sm">"If you want your makeup to feel like yourself but better, do not hesitate 
 
-choose Anshika! Her attention to detail, care, and skills all shine through and through. 10/10 ✨"</p>
+at all to choose Anshika! Her attention to detail, care, and skills all shine through and through. 10/10 ✨"</p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Aanya Sinha">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 mr-3 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Aanya Sinha" class="w-full h-full 
+
+object-cover">
                         </div>
                         <div>
-                            <p class="font-semibold">Aanya Sinha</p>
-                            <p class="text-sm text-gray-600">Professional Makeup Artist</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card bg-[#fff9fb] p-8">
-                    <div class="rating mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="italic mb-6">"Her work is awesome and her teaching style is very good she explains and teach very 
-
-well❣️❣️🥰"</p>
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Priya Bharti">
-                        </div>
-                        <div>
-                            <p class="font-semibold">Priya Bharti</p>
-                            <p class="text-sm text-gray-600">Regular Client</p>
+                            <p class="font-semibold text-sm">Aanya Sinha</p>
+                            <p class="text-xs text-gray-600">Regular Client</p>
                         </div>
                     </div>
                 </div>
@@ -668,80 +615,66 @@ well❣️❣️🥰"</p>
     <!-- Gallery Section -->
     <section id="gallery" class="bg-[#fff9fb] section-padding">
         <div class="container mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-8">
                 <span class="text-[#c2185b] font-semibold">GALLERY</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Beauty Portfolio</h2>
-                <div class="w-24 h-1 bg-[#d4af37] mx-auto mt-4"></div>
+                <h2 class="section-title text-2xl md:text-3xl font-bold mt-2">Our Beauty Portfolio</h2>
+                <div class="w-20 h-1 bg-[#d4af37] mx-auto mt-3"></div>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="overflow-hidden rounded-xl">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipOfZUQ-pzVr-9Bx8zkQ2tnRwDjRj4Q9U901k7D2=s1360-w1360-h1020-rw" 
+            <div class="grid grid-cols-2 gap-3">
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOfZUQ-pzVr-9Bx8zkQ2tnRwDjRj4Q9U901k7D2=s1360-w1360-
 
-alt="Bridal Makeup" class="w-auto h-auto">
+h1020-rw" alt="Bridal Makeup" class="w-full h-40 object-cover">
                 </div>
-                <div class="overflow-hidden rounded-xl">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipOESU5u0QPe6CHTCi7xLYhq6Jw_j6xsmOy0qai6=s1360-w1360-h1020-rw" 
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOESU5u0QPe6CHTCi7xLYhq6Jw_j6xsmOy0qai6=s1360-w1360-
 
-alt="Party Makeup" class="w-auto h-auto">
+h1020-rw" alt="Party Makeup" class="w-full h-40 object-cover">
                 </div>
-                <div class="overflow-hidden rounded-xl">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipMAo8qF3JDe3SJfPcAo-QsPBOxUIWE1a9aGF2HR=s1360-w1360-h1020-rw" 
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMAo8qF3JDe3SJfPcAo-QsPBOxUIWE1a9aGF2HR=s1360-w1360-
 
-alt="Nail Art Design" class="w-auto h-auto">
+h1020-rw" alt="Nail Art" class="w-full h-40 object-cover">
                 </div>
-                <div class="overflow-hidden rounded-xl">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipNN55sviYz_y5t4DaCxfXeXcN4va3TuwEMPDXUA=s1360-w1360-h1020-rw" 
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNN55sviYz_y5t4DaCxfXeXcN4va3TuwEMPDXUA=s1360-w1360-
 
-alt="Traditional Look" class="w-auto h-auto">
+h1020-rw" alt="Traditional Look" class="w-full h-40 object-cover">
                 </div>
-                <div class="overflow-hidden rounded-xl">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipMSN9jZrIYXlWih2bAOOB2jmhDoopM6Ue8L3ou0=s1360-w1360-h1020-rw" 
+            </div>
+            
+            <div class="mt-6 text-center">
+                <a href="https://www.instagram.com/_anshikamakeupstudioandacademy/#" class="cta-button bg-[#c2185b] text-
 
-alt="Festive Makeup" class="w-auto h-auto">
-                </div>
-                <div class="overflow-hidden rounded-xl">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipOy81bq88aXCc81JqCFUpO1x1olqEzM3zE3NozK=s1360-w1360-h1020-rw" 
-
-alt="Evening Glam" class="w-auto h-auto">
-                </div>
+white">View More on Instagram</a>
             </div>
         </div>
     </section>
-            <div class=" bg-gradient-to-r from-[#c2185b] to-[#ad1457] rounded-2xl p-4 text-white text-center max-w-4xl mx-auto">
-                
-                <a href="https://www.instagram.com/_anshikamakeupstudioandacademy/#" class="cta-button bg-white text-[#c2185b] 
-
-hover:bg-gray-100">Click for More</a>
-            </div>
 
     <!-- Contact Section -->
     <section id="contact" class="bg-[#fff9fb] section-padding">
         <div class="container mx-auto">
             <div class="text-center mb-6">
                 <span class="text-[#c2185b] font-semibold">CONTACT US</span>
-                <h2 class="text-3xl md:text-4xl font-bold ">Get In Touch</h2>
-                <div class="w-24 h-1 bg-[#d4af37] mx-auto mt-4"></div>
+                <h2 class="section-title text-2xl md:text-3xl font-bold">Get In Touch</h2>
+                <div class="w-20 h-1 bg-[#d4af37] mx-auto mt-3"></div>
             </div>
             
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="contact-grid max-w-4xl mx-auto grid grid-cols-1 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold mb-6">Book Your Appointment</h3>
-                    <form class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Book Your Appointment</h3>
+                    <form class="space-y-3">
                         <div>
-                            <label class="block text-gray-700 mb-2">Name</label>
                             <input type="text" class="w-full input-field" placeholder="Your Name">
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2">Email</label>
                             <input type="email" class="w-full input-field" placeholder="Your Email">
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2">Phone</label>
                             <input type="tel" class="w-full input-field" placeholder="Your Phone">
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2">Service</label>
                             <select class="w-full input-field">
                                 <option>Select a Service</option>
                                 <option>Bridal Makeup</option>
@@ -752,68 +685,68 @@ hover:bg-gray-100">Click for More</a>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2">Message</label>
-                            <textarea class="w-full input-field" rows="4" placeholder="Your Message"></textarea>
+                            <textarea class="w-full input-field" rows="3" placeholder="Your Message"></textarea>
                         </div>
                         <button class="cta-button w-full">Send Message</button>
                     </form>
                 </div>
                 
                 <div>
-                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-                    <div class="space-y-6">
+                    <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                    <div class="space-y-4">
                         <div>
-                            <h4 class="font-semibold text-lg mb-2"><i class="fas fa-map-marker-alt text-[#c2185b] mr-3"></i> Studio 
+                            <h4 class="font-semibold mb-2"><i class="fas fa-map-marker-alt text-[#c2185b] mr-2"></i> Studio 
 
 Address</h4>
-                            <p>Main market road, Saharpura Main Market Rd, beside ganpati telecom, Sindri, Jharkhand 828122</p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2"><i class="fas fa-clock text-[#c2185b] mr-3"></i> Working 
+                            <p class="text-sm">Main market road, Saharpura Main Market Rd, beside ganpati telecom, Sindri, 
 
-Hours</h4>
-                            <p>Monday - Sunday: 10:00 AM - 9:00 PM</p>
-                            
+Jharkhand 828122</p>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-lg mb-2"><i class="fas fa-phone-alt text-[#c2185b] mr-3"></i> Phone & 
+                            <h4 class="font-semibold mb-2"><i class="fas fa-clock text-[#c2185b] mr-2"></i> Working Hours</h4>
+                            <p class="text-sm">Monday - Sunday: 10:00 AM - 9:00 PM</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2"><i class="fas fa-phone-alt text-[#c2185b] mr-2"></i> Phone & 
 
 Email</h4>
-                            <p>Phone: +919279834665</p>
-                            <p>Email: Makeup.anshika@gmail.com</p>
+                            <p class="text-sm">+919279834665</p>
+                            <p class="text-sm">Makeup.anshika@gmail.com</p>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-lg mb-2"><i class="fas fa-hashtag text-[#c2185b] mr-3"></i> Connect With 
+                            <h4 class="font-semibold mb-2"><i class="fas fa-hashtag text-[#c2185b] mr-2"></i> Connect With 
 
 Us</h4>
-                            <div class="flex space-x-4 mt-4">
-                                <a href="https://www.instagram.com/_anshikamakeupstudioandacademy" class="text-2xl text-[#c2185b] 
+                            <div class="flex space-x-4 mt-3">
+                                <a href="https://www.instagram.com/_anshikamakeupstudioandacademy" class="text-2xl text-
 
-hover:text-[#ad1457]"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.facebook.com/anshikasah1402/about?locale=id_ID" class="text-2xl text-[#c2185b] 
+[#c2185b]"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/anshikasah1402/about?locale=id_ID" class="text-2xl text-
 
-hover:text-[#ad1457]"><i class="fab fa-facebook"></i></a>
+[#c2185b]"><i class="fab fa-facebook"></i></a>
                                 <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutube.com%2F
 
 %2540anshikasah_&h=AT0_i6bwnJJ5L_I7Dbe_Kx1KCo4pGzVgkJhhOkCIBZgqdRqeMb_-Eo8PdYv6IPzZwOdo9LR6SByDd-
 
-CCLEx67vlLsLdjWFmNkMnCsEYE_TW6w2Zx0168gWQJB2zKGaGS0X7t_3zGj472Ik56Malz" class="text-2xl text-[#c2185b] hover:text-[#ad1457]"><i 
+CCLEx67vlLsLdjWFmNkMnCsEYE_TW6w2Zx0168gWQJB2zKGaGS0X7t_3zGj472Ik56Malz" class="text-2xl text-[#c2185b]"><i class="fab fa-
 
-class="fab fa-youtube"></i></a>
+youtube"></i></a>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="mt-10">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.0013280275843!2d86.49022529999999!
+                    <div class="map-container mt-6 rounded-xl overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.0013280275843!
 
-3d23.6759105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6971c78401f45%3A0xd1301f4b5e2df139!2sAnshika%20Makeup%20Studio
+2d86.49022529999999!3d23.6759105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6971c78401f45%3A0xd1301f4b5e2df139!
 
-%20%26%20Academy!5e0!3m2!1sen!2sin!4v1748880072180!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" 
-
-loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="200" style="border:0; border-radius: 12px;" 
-
-allowfullscreen="" loading="lazy"></iframe>
+2sAnshika%20Makeup%20Studio%20%26%20Academy!5e0!3m2!1sen!2sin!4v1748880072180!5m2!1sen!2sin" 
+                            class="w-full h-full border-0"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -821,71 +754,56 @@ allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#2c0b1a] text-white py-6">
-        
-            
-            <div class="border-t border-gray-800 mt-2 pt-2 text-center">
-                <p class="mt-2 text-black">© 2025 Anshika Makeup Studio and Academy.</p>
-                <p class="mt-2 text-gray-400">Designed with ❤️ for beauty enthusiasts.</p>
-            </div>
+    <footer class="bg-[#2c0b1a] text-black py-5">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">© 2025 Anshika Makeup Studio and Academy.</p>
+            <p class="mt-1 text-xs text-gray-400">Designed with ❤️ for beauty enthusiasts.</p>
         </div>
     </footer>
 
     <script>
+        // Toggle mobile menu
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.innerHTML = '<svg class="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 
+
+24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+                navLinks.style.display = 'flex';
+            } else {
+                mobileMenu.innerHTML = '<svg class="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 
+
+24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+                navLinks.style.display = 'none';
+            }
+        });
+
+        // Close menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenu.innerHTML = '<svg class="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 
+
+24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+                navLinks.style.display = 'none';
+            });
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
                         behavior: 'smooth'
                     });
                 }
             });
-        });
-
-        // Toggle mobile menu
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            if (mobileMenu.classList.contains('active')) {
-                mobileMenu.innerHTML = '<svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 
-
-24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
-            } else {
-                mobileMenu.innerHTML = '<svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 
-
-24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
-            }
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenu.innerHTML = '<svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 
-
-24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
-            });
-        });
-
-        // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fadeIn');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.card, .testimonial-card, .course-card').forEach(card => {
-            observer.observe(card);
         });
     </script>
 </body>
