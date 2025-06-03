@@ -312,6 +312,91 @@
                 font-size: 1.8rem;
             }
         }
+        /* Updated thank-you-modal styles */
+        .thank-you-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .thank-you-modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .thank-you-content {
+            background: #fff9fb; /* Match theme light color */
+            border-radius: 15px;
+            padding: 2.5rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(194, 24, 91, 0.3);
+            position: relative;
+        }
+        
+        .thank-you-content h3 {
+            color: #c2185b; /* Primary color */
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .thank-you-content p {
+            margin-bottom: 1.5rem;
+            color: #2c0b1a; /* Dark text */
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #c2185b;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            background: #ad1457; /* Darker shade */
+        }
+        
+        .modal-button {
+            background: linear-gradient(135deg, #c2185b, #ad1457);
+            color: white;
+            padding: 0.9rem 1.8rem;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3);
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        .modal-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(194, 24, 91, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -324,7 +409,7 @@
     <nav class="bg-white py-3 sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="https://i.postimg.cc/13PLNXcK/Chat-GPT-Image-Jun-2-2025-07-51-24-PM-2-2-removebg-preview-1.png" class="logo-img w-auto h-12">
+                <img src="https://i.postimg.cc/NF054Jfb/Chat-GPT-Image-Jun-2-2025-07-51-24-PM-2-2-removebg-preview-2.png" class="w-auto h-14">
                 <h1 class="logo-text text-xl font-bold text-gray-800 ml-2">Anshika <span class="text-[#c2185b]">Makeup<br> Studio & Academy</span></h1>
             </div>
             
@@ -344,6 +429,20 @@
             </ul>
         </div>
     </nav>
+<!-- Thank You Modal -->
+    <div id="thankYouModal" class="thank-you-modal">
+        <div class="thank-you-content">
+            <button class="close-modal">&times;</button>
+            <div class="mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80" fill="#c2185b" class="mx-auto">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your message has been received. We'll get back to you soon.</p>
+            
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero-bg text-white">
@@ -598,7 +697,7 @@
             <div class="contact-grid max-w-4xl mx-auto grid grid-cols-1 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Book Your Appointment</h3>
-                    <form action="https://formsubmit.co/rupesh78734@gmail.com" method="POST" class="space-y-3">
+                    <form action="https://formsubmit.co/makeup.anshika@gmail.com" method="POST" class="space-y-3">
     <input type="hidden" name="_captcha" value="false">
     <div>
         <input type="text" name="name" class="w-full input-field" placeholder="Your Name" required>
@@ -708,6 +807,59 @@
                     });
                 }
             });
+        });
+        // Form submission handler
+        const contactForm = document.querySelector('#contact form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Create a FormData object from the form
+            const formData = new FormData(contactForm);
+            
+            // Show loading state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitButton.disabled = true;
+            
+            // Submit form via AJAX
+            fetch('https://formsubmit.co/ajax/makeup.anshika@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Reset form
+                contactForm.reset();
+                
+                // Show thank you modal
+                document.getElementById('thankYouModal').classList.add('active');
+                
+                // Reset button
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your message. Please try again later.');
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            });
+        });
+
+        // Close modal functionality
+        document.querySelectorAll('.close-modal').forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById('thankYouModal').classList.remove('active');
+            });
+        });
+
+        // Close modal when clicking outside content
+        document.getElementById('thankYouModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+            }
         });
     </script>
 </body>
